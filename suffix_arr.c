@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	char c[] = "banana";
-	int len = sizeof(c);
+	int len = sizeof(c) - 1;
 	char **a = (char **)malloc(len * sizeof(char *));
 
 	for (i = 0; i < len; i++)
@@ -41,5 +41,7 @@ int main(int argc, char *argv[])
 	for (i = 0; i < len; i++)
 		printf("%s\n", a[i]);
 
+	int t[2];
+	printf("sizeof(t): %lu\n", sizeof(t));
 	return 0;
 }
